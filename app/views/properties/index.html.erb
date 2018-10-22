@@ -1,0 +1,16 @@
+<br />
+<h2>properties#show</h2>
+
+<%= link_to "Add a Property",new_property_path %>
+<br />
+<br />
+
+<% @properties.each do |property| %>
+  <%= property.inspect%>
+  <%= link_to(property.premise.to_s + " " + property.address.to_s, property_path(property)) %>
+  <%= link_to('Edit It', edit_property_path(property)) %>
+  <%= link_to('Destroy It Entirely!', property_path(property),
+      method: :delete, 
+      data:{ confirm: 'Ya sure?' } ) %>
+  <br />
+<% end %>s

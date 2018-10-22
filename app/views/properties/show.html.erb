@@ -1,0 +1,12 @@
+<br />
+<h1>Show Property</h1>
+<h3>properties#show</h3>
+
+
+<%= link_to('Edit It', edit_property_path(@property)) %>
+<%= link_to('Destroy It Entirely!', property_path(@property),
+    method: :delete, 
+    data:{ confirm: 'Ya sure?' } ) %>
+
+<%= @property.inspect %>
+
